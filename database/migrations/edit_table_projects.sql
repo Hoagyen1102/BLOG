@@ -1,0 +1,1 @@
+ALTER TABLE `projects` ADD `leader` VARCHAR(255) NOT NULL AFTER `status`, ADD `users` VARCHAR(255) NOT NULL AFTER `leader`, ADD `descriptions` VARCHAR(255) NOT NULL AFTER `users`;
