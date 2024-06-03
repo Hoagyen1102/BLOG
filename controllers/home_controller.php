@@ -4,6 +4,7 @@ class home_controller extends vendor_main_controller {
 		$comments = comment_model::getInstance();
 		$marks = mark_model::getInstance();
 		$records = post_repository::getAllRecordPublished();
+		$topRecord = post_repository::getTopRecord();
 		if($records) {
 			$cmt = post_repository::getCounts($records,$comments);
 			$mark = post_repository::getCounts($records,$marks);
@@ -11,6 +12,7 @@ class home_controller extends vendor_main_controller {
 			$this->setProperty('mark',$mark);		
 		}
 		$this->setProperty('record',$records);
+		$this->setProperty('topRecord',$topRecord);
 		$this->display();
 	} 
 }

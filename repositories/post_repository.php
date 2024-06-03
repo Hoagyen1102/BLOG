@@ -60,5 +60,18 @@ class post_repository {
 		}
 		return false;
     }  
+	public static function getTopRecord() {
+        $conn = mysqli_connect(DB_HOST,DB_USER,DB_PASSWORD,DB_NAME);
+        $sql = 'SELECT posts.*, users.id as users_id, users.email as users_email, users.password as users_password, 
+				users.fullname as users_fullname, users.username as users_username, users.image as users_image, users.role as users_role,
+				users.status as users_status, users.created as users_created, users.updated as users_updated, categories.id as categories_id, 
+				categories.category_name as categories_category_name FROM posts 
+				LEFT JOIN users ON posts.user_id=users.id 
+				LEFT JOIN categories ON posts.category_id=categories.id 
+				WHERE posts.status = 1
+				ORDER BY posts.created DESC LIMIT 8';
+        $result = mysqli_query($conn, $sql);
+        return $result;
+    } 
 }
 ?>
