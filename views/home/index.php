@@ -5,10 +5,6 @@
 <div class="main">
     <div class="container d-flex">
         <div class="list-question w-75" >
-            <div class="sl-show-content d-flex e-flex">
-                <a href="#"><i class="fa-solid fa-bars "></i></a>
-                <a href="#"><i class="fa-regular fa-newspaper"></i></a>
-            </div>
             <?php if($this->record) {?> 
                 <?php foreach($this->record as $rows): ?>
                 <div class="each-question d-flex">
@@ -29,11 +25,8 @@
                         <div class="item d-flex align-center space-between">
                             <div class="left-item">
                                 <span><i class="fa-regular fa-eye"></i><?php echo $rows['views']; ?></span>
-                                <span><i class="fa-solid fa-bookmark"></i><?php echo $this->mark[$rows['id']]; ?></span>
+                                <span><i class="fa-solid fa-thumbs-up"></i><?php echo $rows['total_like']; ?></span>
                                 <span><i class="fa-solid fa-comments"></i><?php echo $this->cmt[$rows['id']]; ?></span>
-                            </div>
-                            <div class="right-item">
-                                <span><i class="fa-solid fa-sort"></i>87</span>
                             </div>
                         </div>
                     </div>

@@ -15,4 +15,3 @@ class home_controller extends vendor_main_controller {
 	} 
 }
 ?>
-
