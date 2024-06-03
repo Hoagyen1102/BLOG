@@ -1,10 +1,27 @@
 <?php
 class post_repository {
-	public static function getAllRecordPublished(){
+	public static function getAllRecordPagination($page = 1, $nopp = 10) {
 		$posts = post_model::getInstance();
-		$records = $posts->getRecords('*', ['joins'=>['user', 'category', 'comment', 'like'], 'conditions' => 'status=1']);
+		$conditions = 'status=1';
+		$records = $posts->getRecords('*', [
+			'joins' => ['user', 'category', 'comment', 'like'],
+			'conditions' => $conditions,
+			'pagination' => ['page' => $page, 'nopp' => $nopp]
+		]);
+		$totalRecords = self::getCountPosts($conditions);
+		$totalPages = ceil($totalRecords / $nopp);
+	
+		return ['records' => $records, 'totalPages' => $totalPages];
+	}	
+	public static function getAllRecordPublished() {
+		$posts = post_model::getInstance();
+		$conditions = 'status=1';
+		$records = $posts->getRecords('*', [
+			'joins' => ['user', 'category', 'comment', 'like'],
+			'conditions' => $conditions
+		]);
 		return $records;
-    }
+	}	
 
 	public static function upViews($slug){
 		$post = post_model::getInstance();
@@ -34,7 +51,13 @@ class post_repository {
 			}
 		}
 		return $array;
-    }    
+    }   
+	
+	public static function getCountPosts($conditions){
+		$post = post_model::getInstance();
+		$count = $post->getCountRecords(['conditions' => $conditions]);
+		return $count;
+    }   
 	
 	public static function getRecordByID($id){
 		$post = post_model::getInstance();

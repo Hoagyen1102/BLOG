@@ -35,6 +35,22 @@
                     </div>
                 </div>
                 <?php endforeach; ?>
+                <!-- Pagination Controls -->
+                <div class="pagination text-center">
+                    <?php if($this->currentPage > 1): ?>
+                        <a href="?page=<?= $this->currentPage - 1 ?>">Previous</a>
+                    <?php endif; ?>
+                    
+                    <?php for ($i = 1; $i <= $this->totalPages; $i++): ?>
+                        <a href="?page=<?= $i ?>" class="<?= ($i == $this->currentPage) ? 'active' : '' ?>">
+                            <?= $i ?>
+                        </a>
+                    <?php endfor; ?>
+                    
+                    <?php if($this->currentPage < $this->totalPages): ?>
+                        <a href="?page=<?= $this->currentPage + 1 ?>">Next</a>
+                    <?php endif; ?>
+                </div>
             <?php } else { ?>
                 <div class="text-center"><p>Chưa có bài viết nào được đăng tải!</p></div>  
             <?php }  ?>

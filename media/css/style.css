@@ -288,6 +288,18 @@ input{
     line-height: 30px;
     color: var(--light-gray);
 }
+/* Start pagination */
+.pagination{
+    line-height: 70px;
+    font-size: 20px;
+}
+.pagination a{
+    padding: 0 10px;
+}
+.pagination .active{
+    color: var(--blue);
+}
+/* End pagination */
 /* Start slide list */
 .slide-list{
     position: relative;
