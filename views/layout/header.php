@@ -47,7 +47,7 @@
                             <li><a href="#" class="text-blue"><span>&nbsp;<?php echo $_SESSION['user']['fullname']?></span></a></li>
                         </div>
                         <li><a href="<?php echo vendor_app_util::url(array('ctl'=>'login', 'act'=>'logout')); ?>" class="sign-in">
-                            <i class="fa fa-sign-in size-14"></i><span>&nbsp;Đăng xuất</span>
+                            <i class="fa fa-sign-in size-14"></i><span>&ensp;Đăng xuất</span>
                         </a></li>
                     </div>
                     <?php
