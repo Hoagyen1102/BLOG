@@ -37,4 +37,9 @@
 <!-- End crud -->
 <!-- Start footer -->
 <?php include_once 'views/layout/'.$this->layout.'footer.php'; ?>
+<script>
+	CKEDITOR.replace('editor');
+</script>
+</body>
+</html>
 <!-- End footer -->

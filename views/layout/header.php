@@ -63,7 +63,4 @@
             </div>
         </div>
     </div>
-    <div class="bottom-header">
-
-    </div>
 </header>

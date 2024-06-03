@@ -240,4 +240,6 @@
 <!-- End main -->
 <!-- Start footer -->
 <?php include_once 'views/layout/'.$this->layout.'footer.php'; ?>
+</body>
+</html>
 <!-- End footer -->

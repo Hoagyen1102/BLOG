@@ -388,5 +388,7 @@ global $mediaFiles;
 <?php include_once 'views/layout/'.$this->layout.'footer.php'; ?>
 <script src='../../media/js/comments.js'></script>
 <script src='../../media/js/likes.js'></script>
+</body>
+</html>
 <!-- Start footer -->
 <!-- End footer -->

@@ -76,9 +76,4 @@
 </footer>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="//cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
-<script src='media/js/profiles.js'></script>
-<script>
-	CKEDITOR.replace('editor');
-</script>
-</body>
-</html>
+<script src="<?php echo RootREL; ?>/media/js/profiles.js"></script>
