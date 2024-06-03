@@ -1,15 +1,5 @@
 <?php
 class post_repository {
-	// private static $repo = null;
- 
-    // public static function getRepoPost() {
-    //     if (!self::$repo) {
-    //         self::$repo = new post_repository();
-    //     }
-   
-    //     return self::$repo;
-    // }
-
 	public static function getAllRecordPublished(){
 		$posts = post_model::getInstance();
 		$records = $posts->getRecords('*', ['joins'=>['user', 'category', 'comment', 'like'], 'conditions' => 'status=1']);
@@ -62,6 +52,13 @@ class post_repository {
 		$posts = post_model::getInstance();
 		$record = $posts->getRecords('*', ['joins'=>['user', 'category', 'comment', 'like'],'conditions' => 'user_id='.$_SESSION['user']['id']]);
 		return $record;
+    }  
+	public static function checkPermission($slug){
+		$post = self::getRecordBySlug($slug);
+        if($post['user_id'] == $_SESSION['user']['id']){
+			return true;
+		}
+		return false;
     }  
 }
 ?>

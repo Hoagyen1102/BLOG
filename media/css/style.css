@@ -83,9 +83,6 @@ input{
 .w-50{
     width: 50%;
 }
-.w-70{
-    width: 70%;
-}
 .w-75{
     width: 75%;
 }
@@ -176,6 +173,9 @@ input{
     background-color: var(--blue);
     color: white;
 }
+.right-header{
+    position: relative;
+}
 .right-header i{
     font-size: 20px;
 }
@@ -192,6 +192,33 @@ input{
 .sign-in{
     color: var(--blue) !important;
     font-weight: 500 !important;
+}
+.list-profile{
+    position: absolute;
+    display: none;
+    top: 60px;
+    right: 0;
+    width: 275px;
+    background: white;
+    border: 1px solid var(--border-color);
+    list-style: none;
+}
+.profile-link img{
+    vertical-align: middle;
+    width: 40px;
+    height: 40px;
+}
+.list-profile li{
+    padding: 0 10px;
+}
+.info{
+    padding: 0 10px;
+    line-height: 80px;
+    background-color: var(--lighter-gray);
+}
+.info img{
+    width: 60px;
+    height: 60px;
 }
 /* End header */
 /* Start main */
@@ -469,32 +496,6 @@ footer h3{
 }
 /* End forgot pass */
 /* Start view detail blog */
-/* Start left post */
-.left-post{
-    position: sticky;
-    top: 250px;
-    height: 100vh;
-    font-size: 30px;
-}
-.btn-left-post{
-    border: 1px solid var(--border-color);
-    background-color: white;
-    border-radius: 50%;
-    width: 40px;
-    height: 40px;
-}
-.font-custom{
-    font-family: 'Times New Roman', Times, serif;
-    font-size: 20px;
-}
-.btn-bookmark{
-    border-width: 2px;
-}
-.btn-social{
-    width: 30px;
-    height: 30px;
-}
-/* End left post */
 /* Start content */
 .all-content{
     position: relative;
@@ -562,7 +563,7 @@ table,
 td, 
 tr,
 th{
-    border: 1px solid var(--font-color);
+    border: 1px solid var(--border-color);
     padding: 10px;
 }
 .table-all-post{

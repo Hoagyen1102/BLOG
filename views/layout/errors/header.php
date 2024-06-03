@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Students</title>
+  <title>INFOR</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="softdevelopinc">
   <meta name="author" content="softdevelopinc@gmail.com">

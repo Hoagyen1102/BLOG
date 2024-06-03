@@ -8,18 +8,7 @@ global $mediaFiles;
 <div class="main">
     <div class="container">
         <div class="all-content d-flex">
-            <div class="left-post w-5 d-flex c-flex align-center text-light-gray">
-                <div class="mb-10 d-flex c-flex align-center">
-                    <a href="#"><i class="fa-solid fa-sort-up text-light-gray"></i></a>
-                    <p style="margin: -20px 0;">87</p>
-                    <a href="#"><i class="fa-solid fa-sort-down text-light-gray"></i></a>
-                </div>
-                <button class="btn-left-post btn-bookmark mb-10"><i class="fa-solid fa-bookmark text-light-gray"></i></button>
-                <button class="btn-left-post btn-font mb-10"><p class="font-custom text-light-gray">A</p></button>
-                <button class="btn-left-post btn-social mb-10"><i class="fa-brands fa-facebook text-light-gray"></i></button>
-                <button class="btn-left-post btn-social mb-10"><i class="fa-brands fa-twitter text-light-gray"></i></button>
-            </div>
-            <div class="content w-70" >
+            <div class="content w-75" >
                 <div class="d-flex space-between">
                     <div class="user d-flex">
                         <a href="#"><img src="<?php echo '../../media/upload/users/'.$this->record['users_image']; ?>" alt="<?php echo $this->record['users_fullname']; ?>" width="50px"></a>
