@@ -74,22 +74,10 @@
 		</div>
 	</div>
 </footer>
-<script>
-	ClassicEditor
-		.create( document.querySelector( '#editor' ),{
-                    mediaEmbed: {
-                        previewsInData:true
-                    },
-					image: {
-						toolbar: [ 'toggleImageCaption', 'imageTextAlternative', 'ckboxImageEdit' ]
-					},
-					
-                }
-            )
-		.catch( error => {
-			console.error( error );
-		} );
-</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script src="//cdn.ckeditor.com/4.22.1/standard/ckeditor.js"></script>
+<script>
+	CKEDITOR.replace('editor');
+</script>
 </body>
 </html>
